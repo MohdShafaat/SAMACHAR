@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/breaking"
+        android:id="@+id/breakingNewsFragment"
+        android:icon="@drawable/ic_breaking_news"/>
+    <item android:title="@string/search"
+        android:id="@+id/searchNewsFragment"
+        android:icon="@drawable/ic_search_news"/>
+    <item android:title="@string/saved"
+        android:id="@+id/savedNewsFragment"
+        android:icon="@drawable/ic_saved_news"/>
+</menu>

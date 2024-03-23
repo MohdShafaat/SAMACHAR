@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SAMACHAR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="breaking">Breaking</string>
+    <string name="search">Search</string>
+    <string name="saved">Saved</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="date_time">DATE TIME</string>
+    <string name="title">TITLE</string>
+    <string name="source">SOURCE</string>
+</resources>
