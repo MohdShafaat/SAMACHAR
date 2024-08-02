@@ -2,6 +2,7 @@ package com.example.samachar.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.AbsListView
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.samachar.R
@@ -36,7 +38,7 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
         itemBreakingNewsError = view.findViewById(R.id.itemBreakingNewsError)
         val inflater = requireContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view: View = inflater.inflate(R.layout.item_error, itemBreakingNewsError, false)
+        val view: View =  inflater.inflate(R.layout.item_error, itemBreakingNewsError, false)
         retryButton = view.findViewById(R.id.retryButton)
         errorText = view.findViewById(R.id.errorText)
 
@@ -81,7 +83,9 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
 
         retryButton.setOnClickListener {
-//            Log.d("Retry","Error")
+
+//            Toast.makeText(activity, "retry clicked", Toast.LENGTH_SHORT).show()
+            Log.d("Retry","Error")
             view.visibility = View.GONE
             newsViewModel.getBreakingNews("in")
         }

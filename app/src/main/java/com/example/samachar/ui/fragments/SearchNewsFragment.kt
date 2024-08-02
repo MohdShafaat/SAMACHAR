@@ -1,8 +1,8 @@
 package com.example.samachar.ui.fragments
 
+import androidx.fragment.app.Fragment
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.AbsListView
@@ -91,6 +91,14 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                     response.message?.let { message ->
                         Toast.makeText(activity, "Sorry error: $message", Toast.LENGTH_LONG).show()
                         showErrorMessage(message)
+                    }
+
+                    retryButton.setOnClickListener {
+                        if(binding.searchEdit.text.toString().isNotEmpty()) {
+                            newsViewModel.searchNews(binding.searchEdit.text.toString())
+                        } else {
+                            hideErrorMessage()
+                        }
                     }
                 }
 
